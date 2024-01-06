@@ -1,23 +1,43 @@
 * {
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    font-size: 16px;
+    /* border: 1px solid red!important; */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 0.75rem;
 }
 
 body {
     margin: 0;
     color: rgb(70, 70, 70);
+    font-family: 'Roboto', sans-serif;
 }
 
-button {
+.button {
     padding: 8px;
     background-color: gray;
     border: none;
     width: 225px;
 }
 
-button {
+.button {
     color: white;
 }
+
 
 /* Header */
 
@@ -28,7 +48,6 @@ header {
 }
 
 /* navigation menu */
-
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -84,11 +103,11 @@ header {
 /* left side of the hero */
 #hero-image {
     display: flex;
-    flex: 0 0 60%;
+    /* flex: 0 0 60%; */
 }
 
 #hero-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -101,4 +120,87 @@ header {
     padding: 0 0 0 24px;
     text-align: left;
     max-width: 300px;
+}
+
+/* Main */
+.main-container {
+    display: flex;
+    justify-content: stretch;
+    padding: 32px 24px;
+}
+
+h1.test {
+    /* margin-bottom: 1.5rem; */
+}
+
+/* left side of main */
+#main-image {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+}
+
+#main-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* right side of main */
+.container-right {
+    display: flex;
+    flex: 0 0 40%;
+}
+
+.container-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.item-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 16px;
+    margin: 1px;
+    border: solid rgb(229, 229, 229) 1px;
+}
+
+.item-container:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.tiny-image-container {
+    display: flex;
+    width: 35%;
+}
+
+.tiny-image-container img {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    height: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-left: 15px;
+
+}
+
+h3.subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+
+a.link {
+    color: rgb(120, 172, 255);
+    font-size: 0.75rem;
 }
