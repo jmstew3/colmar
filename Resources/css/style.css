@@ -1,9 +1,12 @@
+
+/* HTML level styling */
 * {
     box-sizing: border-box;
     font-size: 16px;
     /* border: 1px solid red!important; */
 }
 
+/* Text Styles */
 h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -22,25 +25,63 @@ p {
 }
 
 body {
-    margin: 0;
-    color: rgb(70, 70, 70);
     font-family: 'Roboto', sans-serif;
+    color: rgb(70, 70, 70);
 }
 
+/* Utility Styles */
+
+/* Width Controls */
+#max-width {
+    max-width: 250px;
+}
+
+/* container items */
+.container-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+}
+
+/* base container layout */
+.base-container {
+    display: flex;
+    justify-content: stretch;
+    padding: 32px 24px;
+}
+
+/* left side of base container */
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+}
+
+/* right side of base container */
+.container-right {
+    display: flex;
+    flex: 0 0 40%;
+}
+
+/*  button: start here */
 .button {
     padding: 8px;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(87, 87, 87);
     border: none;
-    max-width: 225px;
+    width: 100%;
 }
 
-.button {
+.button a {
     color: white;
 }
 
 
-/* Header */
+/* HEADER */
 
 header {
     display: flex;
@@ -48,7 +89,7 @@ header {
     /* justify-content: space-between; */
 }
 
-/* navigation menu */
+/* Navigation Menu */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -58,7 +99,7 @@ header {
     padding: 0 25px;
 }
 
-/* Left side of nav styling */
+/* left side of nav */
 #logo-container {
     display: flex;
     align-items: center;
@@ -75,7 +116,7 @@ header {
     text-transform: uppercase;
 }
 
-/* Right side of nav styling */
+/* right side of nav */
 #top {
     display: flex;
 }
@@ -91,75 +132,25 @@ header {
     margin: 5px;
 }
 
-/* hero section */
 
-.hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding: 32px 24px;
-    background-color: lightgrey;
+/* Hero Section */
+
+#subheadline {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-/* left side of the hero */
-#hero-image {
-    display: flex;
-    /* flex: 0 0 60%; */
+/* MAIN */
+
+/* Main Section */
+.base-container#main-color {
+    background-color: rgb(221, 221, 221);
 }
 
-#hero-image img {
-    width: 100%;
-    height: auto;
-}
-
-/* right side of the hero */
-/* #hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 0 0 40%;
-    padding: 0 0 0 24px;
-    text-align: left;
-    max-width: 300px;
-} */
-
-/* Main */
-.main-container {
-    display: flex;
-    justify-content: stretch;
-    padding: 32px 24px;
-}
-
-h1.test {
-    /* margin-bottom: 1.5rem; */
-}
-
-/* left side of main */
-#main-image {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 60%;
-}
-
-#main-image img {
+.container-left img {
     max-width: 100%;
     height: auto;
     margin-bottom: 2rem;
-}
-
-/* right side of main */
-.container-right {
-    display: flex;
-    flex: 0 0 40%;
-}
-
-.container-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
 }
 
 .item-container {

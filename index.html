@@ -12,10 +12,11 @@
 </head>
 <body>
 
-<!-- Header -->
+
+<!-- HEADER -->
 
 <header>
-    <!-- navigation menu -->
+<!-- Navigation Menu -->
     <div class="navigation">
         <div id="logo-container">
             <div id="logo">
@@ -26,6 +27,7 @@
                 </span>
             </a>
         </div>
+        <!-- nav menu items -->
         <nav id="top">
             <ul>
                 <li>On Campus</li>
@@ -35,55 +37,77 @@
             </ul>
         </nav>
     </div>
-     <!-- hero section -->
-    <div class="hero-container">
-        <div id="main-image">
+<!-- Hero Section -->
+    <!-- flex container -->
+    <div class="base-container" id="main-color">
+        <!-- flex item/container left: hero image -->
+        <div class="container-left">
             <img src="./resources/media/images/banner.jpg" alt="People at a table studying">
         </div>
+        <!-- flex item/container right: headline text -->
         <div id="container-right">
             <div class="container-items">
-                <h1>Learn something new everyday</h1>
-                <p>Lorem ipsum dolor sit amet, consecuteur adipiscing elit.</p>
-                <a href="#" class="button">Start Here</a>
+                <div id="max-width">
+                    <h1>Learn something new everyday</h1>
+                    <p id="subheadline">Lorem ipsum dolor sit amet, consecuteur adipiscing elit.</p>
+                    <!-- button: start here-->
+                    <div class="button"><a href="#">Start Here</a></div>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main -->
+
+<!-- MAIN -->
+
 <main>
-    <div class="main-container">
-        <div id="main-image">
+<!-- Main Section -->
+    <!-- flex container -->
+    <div class="base-container">
+        <!-- flex item/container left: image and headline -->
+        <div class="container-left">
                 <img src="./resources/media/images/information-main.jpg" alt="Man reading a book while sitting outside">
                 <h1 class="test">It doesn't hurt to keep practicing</h1>
                 <p>Curbitur euismod, nunc id aliquam tincidunt, velit nisl consectetur ipsum, nec ultrices nisl elit in nunc. Curabitur eu."</p>
         </div>
+    <!-- sidebar 3-pack -->
+        <!-- flex-container right-->
         <div class="container-right">
             <div class="container-items">
+                <!-- flex-container: orientation date -->
                 <div class="item-container">
+                    <!-- flex-item: image -->
                     <div class="tiny-image-container">
-                        <img src="./resources/media/images/information-orientation.jpg">
+                        <img src="./resources/media/images/information-orientation.jpg" alt="Students walking through campus">
                     </div>
+                    <!-- flex-item: content -->
                     <div class="item">
                         <h3 class="subtitle">Orientation Date</h3>
                         <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
                         <a href="#" class="link">Read More</a>
                     </div>
                 </div>
+                <!-- flex-container: our campus -->
                 <div class="item-container">
+                    <!-- flex-item: image -->
                     <div class="tiny-image-container">
-                        <img src="./resources/media/images/information-campus.jpg">
+                        <img src="./resources/media/images/information-campus.jpg" alt="Students studying in library">
                     </div>
+                    <!-- flex-item: content -->
                     <div class="item">
                         <h3 class="subtitle">Our Campus</h3>
                         <p>Find which campus is close by you</p>
                         <a href="#" class="link">Read More</a>
                     </div>
                 </div>
+                <!-- flex-container: our guest lecture -->
                 <div class="item-container">
+                    <!-- flex-item: image -->
                     <div class="tiny-image-container">
-                        <img src="./resources/media/images/information-guest-lecture.jpg">
+                        <img src="./resources/media/images/information-guest-lecture.jpg" alt="Older professor with eyeglasses staring off camera">
                     </div>
+                    <!-- flex-item: content -->
                     <div class="item">
                         <h3 class="subtitle">Our guest lecture</h3>
                         <p>Join a keynote with Oliver Sack about music in medical treatment</p>
@@ -94,6 +118,8 @@
         </div>
     </div>
 </main>
+
+
 <!-- Start Learning -->
 
 
