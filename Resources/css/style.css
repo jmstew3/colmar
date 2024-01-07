@@ -1,12 +1,19 @@
 
-/* HTML level styling */
+/* HTML STYLING */
 * {
     box-sizing: border-box;
     font-size: 16px;
     /* border: 1px solid red!important; */
 }
 
-/* Text Styles */
+/* DOCUMENT STYLING */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(70, 70, 70);
+}
+
+/* TEXT STYLES */
 h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -14,24 +21,26 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
+    font-weight: 600;
 }
 
 h3 {
     font-size: 1.6rem;
+    font-weight: 600;
 }
 
 p {
     font-size: 0.75rem;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(70, 70, 70);
+/* UTILITY STYLES */
+
+.title {
+    text-align: center;
+    margin: 32px;
 }
 
-/* Utility Styles */
-
-/* Width Controls */
+/* width controls */
 #max-width {
     max-width: 250px;
 }
@@ -41,7 +50,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+}
+
+.container-items#alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     width: 100%;
     height: 100%;
     padding: 0 16px;
@@ -50,8 +67,14 @@ body {
 /* base container layout */
 .base-container {
     display: flex;
-    justify-content: stretch;
     padding: 32px 24px;
+}
+
+.base-container #thesis {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 /* left side of base container */
@@ -80,13 +103,11 @@ body {
     color: white;
 }
 
-
 /* HEADER */
 
 header {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 /* Navigation Menu */
@@ -100,8 +121,9 @@ header {
 }
 
 /* left side of nav */
-#logo-container {
+.nav-left {
     display: flex;
+    justify-content: stretch;
     align-items: center;
 }
 
@@ -117,17 +139,17 @@ header {
 }
 
 /* right side of nav */
-#top {
+.nav-right {
     display: flex;
 }
 
-#top ul {
+.nav-right ul {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
 }
 
-#top li {
+.nav-right li {
     padding: 0 10px;
     margin: 5px;
 }
@@ -143,7 +165,8 @@ header {
 /* MAIN */
 
 /* Main Section */
-.base-container#main-color {
+
+.section-color {
     background-color: rgb(221, 221, 221);
 }
 
@@ -159,11 +182,11 @@ header {
     align-items: center;
     padding: 16px;
     margin: 1px;
-    border: solid rgb(229, 229, 229) 1px;
+    border: solid rgb(221, 221, 221) 1px;
 }
 
 .item-container:hover {
-    background-color: rgb(205, 205, 205);
+    background-color: rgb(221, 221, 221);
 }
 
 .tiny-image-container {
@@ -196,4 +219,33 @@ h3.subtitle {
 a.link {
     color: rgb(120, 172, 255);
     font-size: 0.75rem;
+}
+
+/* Start Learning Section */
+.alt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.learning-item {
+    display: flex;
+    flex: 0 0 calc(33.3% - 32px);
+    padding: 16px;
+    background-color: white;
+ }
+
+/* Thesis Exhibit Section */
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .65rem;
+    border-top: 0.5px rgba(128, 128, 128, 0.443) solid;
+    margin: 0 10px;
+    padding-top: 16px;
+    padding-left: 24px;
 }

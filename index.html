@@ -11,14 +11,11 @@
     <title>Colmar</title>
 </head>
 <body>
-
-
 <!-- HEADER -->
-
 <header>
 <!-- Navigation Menu -->
     <div class="navigation">
-        <div id="logo-container">
+        <div class="nav-left">
             <div id="logo">
                 <a href="/"><img src="../resources/media/images/ic-logo.svg" alt="Company Logo">
             </div>
@@ -28,7 +25,7 @@
             </a>
         </div>
         <!-- nav menu items -->
-        <nav id="top">
+        <nav class="nav-right">
             <ul>
                 <li>On Campus</li>
                 <li>Online</li>
@@ -39,7 +36,7 @@
     </div>
 <!-- Hero Section -->
     <!-- flex container -->
-    <div class="base-container" id="main-color">
+    <div class="base-container section-color">
         <!-- flex item/container left: hero image -->
         <div class="container-left">
             <img src="./resources/media/images/banner.jpg" alt="People at a table studying">
@@ -58,20 +55,18 @@
     </div>
 </header>
 
-
 <!-- MAIN -->
-
 <main>
 <!-- Main Section -->
-    <!-- flex container -->
-    <div class="base-container">
+    <!-- practicing section -->
+    <div class="base-container" id="practicing">
         <!-- flex item/container left: image and headline -->
         <div class="container-left">
                 <img src="./resources/media/images/information-main.jpg" alt="Man reading a book while sitting outside">
-                <h1 class="test">It doesn't hurt to keep practicing</h1>
+                <h2>It doesn't hurt to keep practicing</h2>
                 <p>Curbitur euismod, nunc id aliquam tincidunt, velit nisl consectetur ipsum, nec ultrices nisl elit in nunc. Curabitur eu."</p>
         </div>
-    <!-- sidebar 3-pack -->
+        <!-- sidebar 3-pack -->
         <!-- flex-container right-->
         <div class="container-right">
             <div class="container-items">
@@ -117,17 +112,95 @@
             </div>
         </div>
     </div>
+    <!-- start learning section -->
+    <div class="base-container section-color">
+        <div class="container-items">
+            <div class="title">
+                <h2>Start learning</h2>
+            </div>
+            <!-- row 1 -->
+            <div class="alt-container" #id="row-1">
+                <div class="learning-item">
+                    Item 1
+                </div>
+                <div class="learning-item">
+                    Item 2
+                </div>
+                <div class="learning-item">
+                    Item 3
+                </div>
+            </div>
+            <!-- row 2 -->
+            <div class="alt-container" #id="row-2">
+                <div class="learning-item">
+                    Item 4
+                </div>
+                <div class="learning-item">
+                    Item 5
+                </div>
+                <div class="learning-item">
+                    Item 6
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- thesis exhibit section -->
+    <div class="title">
+        <h2>Thesis exhibit</h2>
+    </div>
+    <div class="base-container" id="thesis">
+        <!-- video -->
+        <div class="container-left">
+                <img src="./resources/media/videos/thesis.mp4" alt="video">
+                <h2>Reimagine urban</h2>
+                <p>Curbitur euismod, nunc id aliquam tincidunt, velit nisl consectetur ipsum, nec ultrices nisl elit in nunc. Curabitur eu."</p>
+        </div> 
+        <!-- container items -->   
+        <div class="container-right">
+            <div class="container-items" id="alt">
+                <!-- flex-container: orientation date -->
+                <div class="item-container">
+                    <!-- flex-item: image -->
+                    <div class="tiny-image-container">
+                        <img src="./resources/media/images/information-orientation.jpg" alt="Students walking through campus">
+                    </div>
+                    <!-- flex-item: content -->
+                    <div class="item">
+                        <h3 class="subtitle">Orientation Date</h3>
+                        <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a href="#" class="link">Read More</a>
+                    </div>
+                </div>
+                <!-- flex-container: our campus -->
+                <div class="item-container">
+                    <!-- flex-item: image -->
+                    <div class="tiny-image-container">
+                        <img src="./resources/media/images/information-campus.jpg" alt="Students studying in library">
+                    </div>
+                    <!-- flex-item: content -->
+                    <div class="item">
+                        <h3 class="subtitle">Our Campus</h3>
+                        <p>Find which campus is close by you</p>
+                        <a href="#" class="link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
-
-<!-- Start Learning -->
-
-
-<!-- Thesis Exhibit -->
-
-
 <!-- Footer -->
-
+<footer>
+    <div class="nav-left">
+        <p>©2016 Colormar Academy. All Rights Reserved</p>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li>Terms</li>
+            <li>Privacy</li>
+        </ul>
+    </div>
+</footer>
     
 </body>
 </html>
