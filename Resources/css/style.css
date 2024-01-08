@@ -2,116 +2,121 @@
 /* HTML STYLING */
 * {
     box-sizing: border-box;
-    font-size: 16px;
-    /* border: 1px solid red!important; */
+    border: 1px solid red!important;
 }
 
 /* DOCUMENT STYLING */
 
-body {
+html {
+    font-size: 16px;
+    color: rgb(129, 129, 129);
     font-family: 'Roboto', sans-serif;
-    color: rgb(70, 70, 70);
 }
 
 /* TEXT STYLES */
+
 h1 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    color: rgb(70, 70, 70);
+
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     font-weight: 600;
+    letter-spacing: 1.1px;
+    color: rgb(70, 70, 70);
+
 }
 
 h3 {
     font-size: 1.6rem;
     font-weight: 600;
+    color: rgb(70, 70, 70);
+
 }
 
 p {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    line-height: 1.4rem;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+
+.caption {
+    font-size: .75rem;
 }
 
 /* UTILITY STYLES */
 
 .title {
     text-align: center;
-    margin: 32px;
+    margin-bottom: 2.0rem;
 }
 
-/* width controls */
-#max-width {
-    max-width: 250px;
+.section-color {
+    background-color: rgb(221, 221, 221);
 }
 
-/* container items */
-.container-items {
-    display: flex;
+/* pair .column with .container-items class */
+.column {
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
 }
 
-.container-items#alt {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
-}
+/*  BUTTON STYLES */
 
-/* base container layout */
-.base-container {
-    display: flex;
-    padding: 32px 24px;
-}
-
-.base-container #thesis {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-/* left side of base container */
-.container-left {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 60%;
-}
-
-/* right side of base container */
-.container-right {
-    display: flex;
-    flex: 0 0 40%;
-}
-
-/*  button: start here */
 .button {
     padding: 8px;
     text-align: center;
     background-color: rgb(87, 87, 87);
     border: none;
-    width: 100%;
+    max-width: 350px;
 }
 
 .button a {
     color: white;
 }
 
-/* HEADER */
+/* CONTAINER ITEMS */
 
-header {
+.container-items {
     display: flex;
-    flex-direction: column;
 }
 
-/* Navigation Menu */
-.navigation {
+/* BASE CONTAINER LAYOUT */
+
+.base-container {
+    display: flex;
+    padding: 32px 24px;
+}
+
+.hug-right {
+    padding: 32px 0 32px 24px;
+}
+
+.container-left {
+    display: flex;
+    flex: 0 0 60%;
+}
+
+.container-right {
+    display: flex;
+    flex: 0 0 40%;
+}
+
+/* HEADER */
+
+/* NAVIGATION BAR */
+
+#navigation-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,6 +146,8 @@ header {
 /* right side of nav */
 .nav-right {
     display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .nav-right ul {
@@ -154,26 +161,44 @@ header {
     margin: 5px;
 }
 
+/* HERO SECTION */
 
-/* Hero Section */
-
-#subheadline {
-    font-size: 1rem;
-    font-weight: 500;
+#hero-section .base-container .container-left img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* MAIN */
-
-/* Main Section */
-
-.section-color {
-    background-color: rgb(221, 221, 221);
+#hero-section .container-items {
+    justify-content: center;
+    margin-left: 24px;
 }
 
-.container-left img {
+/* MAIN CONTENT */
+
+/* PRACTICING SECTION */
+
+/* left container */
+
+#practicing-section .container-left {
+    flex-direction: column;
+}
+
+#practicing-section .base-container .container-left img {
     max-width: 100%;
     height: auto;
     margin-bottom: 2rem;
+}
+
+#practicing-section p.caption {
+    font-size: .85rem;
+    color: rgb(93, 93, 93);
+}
+
+/* right container */
+
+#practicing-section .base-container .container-right .container-items {
+    justify-content: start;
+    margin-left: 24px;
 }
 
 .item-container {
@@ -210,7 +235,7 @@ header {
 }
 
 h3.subtitle {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: -5px;
 }
@@ -218,11 +243,20 @@ h3.subtitle {
 
 a.link {
     color: rgb(120, 172, 255);
-    font-size: 0.75rem;
+    font-size: 0.90rem;
 }
 
-/* Start Learning Section */
-.alt-container {
+/* LEARNING SECTION */
+
+#learning-section .container-items .title {
+
+}
+
+#learning-section .container-items {
+    width: 100%;
+}
+
+.feature-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -238,14 +272,51 @@ a.link {
 
 /* Thesis Exhibit Section */
 
+#thesis-section {
+    margin: 32px 0 0;
+}
+
+#thesis-section .container-items {
+    justify-content: center;
+    margin-left: 24px;
+}
+
+#thesis-section .container-left {
+    flex-direction: column;
+}
+
+#thesis-section .base-container .container-left img {
+    max-width: 100%;
+}
+
+#thesis-section .container-right {
+    flex-direction: column;
+    justify-content: start;
+}
+
+#thesis-section .container-left .video-container {
+    margin-bottom: 1.5rem;
+}
+
+#thesis-section .container-left h2 {
+    margin-bottom: 0.5rem
+}
+
 /* Footer */
+
 footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: .65rem;
     border-top: 0.5px rgba(128, 128, 128, 0.443) solid;
-    margin: 0 10px;
-    padding-top: 16px;
-    padding-left: 24px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+footer .nav-left {
+    padding: 0;
+}
+
+footer .nav-right ul {
+    padding: 1;
+    margin: 0;
 }
