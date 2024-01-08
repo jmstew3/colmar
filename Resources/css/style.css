@@ -38,6 +38,13 @@ h3 {
 
 }
 
+h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+
+}
+
 p {
     font-size: 0.9rem;
     font-weight: 400;
@@ -246,17 +253,15 @@ a.link {
     font-size: 0.90rem;
 }
 
-/* LEARNING SECTION */
-
-#learning-section .container-items .title {
-
-}
+/* START LEARNING SECTION */
 
 #learning-section .container-items {
     width: 100%;
 }
 
-.feature-box {
+/* feature boxes */
+
+.feature-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -265,9 +270,21 @@ a.link {
 
 .learning-item {
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
     flex: 0 0 calc(33.3% - 2rem);
-    padding: 1rem;
     background-color: white;
+ }
+
+ .top-thumbnail img {
+    max-height: auto;
+    width: 100%;
+ }
+
+ .bottom-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
  }
 
 /* Thesis Exhibit Section */
@@ -287,6 +304,10 @@ a.link {
 
 #thesis-section .base-container .hug-right {
     margin-top: -
+}
+
+#thesis-section .title h2 {
+    margin-bottom: -2.0rem;
 }
 
 #thesis-section .base-container .container-left img {
