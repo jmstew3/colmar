@@ -86,10 +86,16 @@ p {
     background-color: rgb(87, 87, 87);
     border: none;
     max-width: 21.875rem;
+    transition: background-color 325ms linear;
 }
 
 .button a {
+    display: block;
     color: white;
+}
+
+.button:hover {
+    background-color: black;
 }
 
 /* CONTAINER ITEMS */
@@ -150,6 +156,10 @@ p {
     text-transform: uppercase;
 }
 
+.emphasis {
+    font-weight: 700;
+}
+
 /* right side of nav */
 .nav-right {
     display: flex;
@@ -161,6 +171,15 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 0 0.3125rem;
+}
+
+.nav-right a {
+    transition: color 350ms linear;
+}
+
+.nav-right a:hover {
+    color: rgb(120, 172, 255);
+    font-weight: 700;
 }
 
 .nav-right li {
@@ -215,6 +234,11 @@ p {
     padding: 1rem;
     margin: 0.0625rem;
     border: solid rgb(221, 221, 221) 1px;
+    transition: background-color 350ms linear;
+}
+
+.item-container span {
+    width: 50%;
 }
 
 .item-container:hover {
@@ -255,6 +279,10 @@ a.link {
 
 /* START LEARNING SECTION */
 
+#learning-section .base-container {
+    padding: 2rem 0rem;
+}
+
 #learning-section .container-items {
     width: 100%;
 }
@@ -266,14 +294,30 @@ a.link {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2.0rem;
+    margin: 0 4.5rem 2rem 4.5rem;
 }
 
 .learning-item {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    flex: 0 0 calc(33.3% - 2rem);
+    flex-basis: calc(33.3% - 2rem);
     background-color: white;
+ }
+
+ /* adds 2rem of margin to the bottom of the 1st, 2nd, and 3rd items */
+ .learning-item:nth-child(-n+3) {
+    margin-bottom: 2rem;
+ }
+
+ /* sets right margin to 0 for the 3rd item of each row */
+ .learning-item:nth-child(3n) {
+    margin-right: 0;
+ }
+
+  /* targets the last child of elements with the class .item */
+  .learning-item:last-child .item {
+    margin-right: 0;
  }
 
  .top-thumbnail img {
@@ -285,6 +329,12 @@ a.link {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+ }
+
+ .bottom-content p.subheadline {
+    font-weight: 400;
+    margin-bottom: -0.45rem;
+    color: rgb(122, 122, 122);
  }
 
 /* Thesis Exhibit Section */
@@ -300,10 +350,6 @@ a.link {
 
 #thesis-section .container-left {
     flex-direction: column;
-}
-
-#thesis-section .base-container .hug-right {
-    margin-top: -
 }
 
 #thesis-section .title h2 {
@@ -344,4 +390,12 @@ footer .nav-left {
 footer .nav-right ul {
     padding: 1rem;
     margin: 0;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: black;
 }
