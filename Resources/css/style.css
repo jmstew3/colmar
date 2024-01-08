@@ -2,7 +2,7 @@
 /* HTML STYLING */
 * {
     box-sizing: border-box;
-    border: 1px solid red!important;
+    /* border: 1px solid red!important; */
 }
 
 /* DOCUMENT STYLING */
@@ -74,11 +74,11 @@ p {
 /*  BUTTON STYLES */
 
 .button {
-    padding: 8px;
+    padding: 0.5rem;
     text-align: center;
     background-color: rgb(87, 87, 87);
     border: none;
-    max-width: 350px;
+    max-width: 21.875rem;
 }
 
 .button a {
@@ -95,11 +95,11 @@ p {
 
 .base-container {
     display: flex;
-    padding: 32px 24px;
+    padding: 2rem 1.5rem;
 }
 
 .hug-right {
-    padding: 32px 0 32px 24px;
+    padding: 2rem 0 2rem 1.5rem
 }
 
 .container-left {
@@ -121,8 +121,8 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 64px;
-    padding: 0 25px;
+    height: 4rem;
+    padding: 0 1.5625rem;
 }
 
 /* left side of nav */
@@ -134,12 +134,12 @@ p {
 
 #logo a {
     display: flex;
-    margin-right: 2.5px;    
+    margin-right: 0.15625rem;    
 }
 
 #logo-text {
     display: flex;
-    padding: 10px 0;
+    padding: 0.625rem 0;
     text-transform: uppercase;
 }
 
@@ -153,12 +153,12 @@ p {
 .nav-right ul {
     display: flex;
     justify-content: space-between;
-    padding: 0 5px;
+    padding: 0 0.3125rem;
 }
 
 .nav-right li {
-    padding: 0 10px;
-    margin: 5px;
+    padding: 0 0.625rem;
+    margin: 0.3125rem;
 }
 
 /* HERO SECTION */
@@ -170,7 +170,7 @@ p {
 
 #hero-section .container-items {
     justify-content: center;
-    margin-left: 24px;
+    margin-left: 1.5rem;
 }
 
 /* MAIN CONTENT */
@@ -198,15 +198,15 @@ p {
 
 #practicing-section .base-container .container-right .container-items {
     justify-content: start;
-    margin-left: 24px;
+    margin-left: 1.5rem;
 }
 
 .item-container {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 16px;
-    margin: 1px;
+    padding: 1rem;
+    margin: 0.0625rem;
     border: solid rgb(221, 221, 221) 1px;
 }
 
@@ -230,14 +230,14 @@ p {
     display: flex;
     flex-direction: column;
     width: 65%;
-    margin-left: 15px;
+    margin-left: 0.9375rem;
 
 }
 
 h3.subtitle {
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: -5px;
+    margin-bottom: -0.3125rem;
 }
 
 
@@ -260,29 +260,33 @@ a.link {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 2.0rem;
 }
 
 .learning-item {
     display: flex;
-    flex: 0 0 calc(33.3% - 32px);
-    padding: 16px;
+    flex: 0 0 calc(33.3% - 2rem);
+    padding: 1rem;
     background-color: white;
  }
 
 /* Thesis Exhibit Section */
 
 #thesis-section {
-    margin: 32px 0 0;
+    margin: 2rem 0 0;
 }
 
 #thesis-section .container-items {
     justify-content: center;
-    margin-left: 24px;
+    margin-left: 1.5rem;
 }
 
 #thesis-section .container-left {
     flex-direction: column;
+}
+
+#thesis-section .base-container .hug-right {
+    margin-top: -
 }
 
 #thesis-section .base-container .container-left img {
@@ -307,8 +311,8 @@ a.link {
 footer {
     display: flex;
     justify-content: space-between;
-    border-top: 0.5px rgba(128, 128, 128, 0.443) solid;
-    padding: 0 24px;
+    border-top: 0.03125rem rgba(128, 128, 128, 0.443) solid;
+    padding: 0 1.5rem;
     margin: 0 auto;
 }
 
@@ -317,6 +321,6 @@ footer .nav-left {
 }
 
 footer .nav-right ul {
-    padding: 1;
+    padding: 1rem;
     margin: 0;
 }
