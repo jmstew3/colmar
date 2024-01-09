@@ -205,7 +205,7 @@ p {
 
 #practicing-section .container-left {
     flex-direction: column;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 0 0;
 }
 
 #practicing-section .base-container .container-left img {
