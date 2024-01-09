@@ -85,7 +85,7 @@ p {
     text-align: center;
     background-color: rgb(87, 87, 87);
     border: none;
-    max-width: 21.875rem;
+    max-width: 17rem;
     transition: background-color 325ms linear;
 }
 
@@ -399,3 +399,17 @@ footer a {
 footer a:hover {
     color: black;
 }
+
+/* Mobile Optimization for 720 */
+
+@media screen and (max-width:720px) {
+    #logo-text {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+/* Mobile Optimization for 480 */
