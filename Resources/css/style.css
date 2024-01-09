@@ -66,7 +66,6 @@ p {
 
 .title {
     text-align: center;
-    margin-bottom: 2.0rem;
 }
 
 .section-color {
@@ -76,6 +75,7 @@ p {
 /* pair .column with .container-items class */
 .column {
     flex-direction: column;
+    justify-content: center;
 }
 
 /*  BUTTON STYLES */
@@ -98,36 +98,34 @@ p {
     background-color: black;
 }
 
-/* CONTAINER ITEMS */
-
-.container-items {
-    display: flex;
-}
-
-/* BASE CONTAINER LAYOUT */
+/* LAYOUT UTILITY ITEMS */
 
 .base-container {
     display: flex;
     padding: 2rem 1.5rem;
 }
 
-.hug-right {
-    padding: 2rem 0 2rem 1.5rem
+.base-container.hug-right {
+    padding: 2rem 0 2rem 1.5rem;
 }
 
-.container-left {
+.base-container .container-left {
     display: flex;
     flex: 0 0 60%;
 }
 
-.container-right {
+.base-container .container-right {
     display: flex;
     flex: 0 0 40%;
+    padding-left: 1.5rem;
 }
 
-/* HEADER */
+.container-items {
+    display: flex;
+    justify-content: center;
+}
 
-/* NAVIGATION BAR */
+/* HEADER ~ */
 
 #navigation-bar {
     display: flex;
@@ -138,7 +136,6 @@ p {
     padding: 0 1.5625rem;
 }
 
-/* left side of nav */
 .nav-left {
     display: flex;
     justify-content: stretch;
@@ -160,7 +157,6 @@ p {
     font-weight: 700;
 }
 
-/* right side of nav */
 .nav-right {
     display: flex;
     justify-content: stretch;
@@ -190,20 +186,17 @@ p {
 /* HERO SECTION */
 
 #hero-section .base-container .container-left img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-#hero-section .container-items {
-    justify-content: center;
-    margin-left: 1.5rem;
-}
-
-/* MAIN CONTENT */
-
 /* PRACTICING SECTION */
 
-/* left container */
+#practicing-section .container-items {
+    /* justify-content: center; */
+    /* margin-left: 1.5rem; */
+    flex-direction: column;
+}
 
 #practicing-section .container-left {
     flex-direction: column;
@@ -215,17 +208,20 @@ p {
     margin-bottom: 2rem;
 }
 
+#practicing-section .container-right {
+    flex-direction: column;
+}
+
+#practicing-section .base-container .container-right .container-items {
+    justify-content: start;
+}
+
 #practicing-section p.caption {
     font-size: .85rem;
     color: rgb(93, 93, 93);
 }
 
-/* right container */
-
-#practicing-section .base-container .container-right .container-items {
-    justify-content: start;
-    margin-left: 1.5rem;
-}
+/* item container styling */
 
 .item-container {
     display: flex;
@@ -279,22 +275,12 @@ a.link {
 
 /* START LEARNING SECTION */
 
-#learning-section .base-container {
-    padding: 2rem 0rem;
-}
-
-#learning-section .container-items {
-    width: 100%;
-}
-
-/* feature boxes */
-
 .feature-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2.0rem;
-    margin: 0 4.5rem 2rem 4.5rem;
+    margin: 2rem 4.5rem 2rem 4.5rem;
 }
 
 .learning-item {
@@ -337,27 +323,20 @@ a.link {
     color: rgb(122, 122, 122);
  }
 
-/* Thesis Exhibit Section */
+/* THESIS SECTION */
 
 #thesis-section {
-    margin: 2rem 0 0;
-}
-
-#thesis-section .container-items {
-    justify-content: center;
-    margin-left: 1.5rem;
+    padding: 2rem 0;
 }
 
 #thesis-section .container-left {
     flex-direction: column;
 }
 
-#thesis-section .title h2 {
-    margin-bottom: -2.0rem;
-}
-
 #thesis-section .base-container .container-left img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 #thesis-section .container-right {
@@ -365,15 +344,7 @@ a.link {
     justify-content: start;
 }
 
-#thesis-section .container-left .video-container {
-    margin-bottom: 1.5rem;
-}
-
-#thesis-section .container-left h2 {
-    margin-bottom: 0.5rem
-}
-
-/* Footer */
+/* FOOTER */
 
 footer {
     display: flex;
@@ -400,16 +371,70 @@ footer a:hover {
     color: black;
 }
 
-/* Mobile Optimization for 720 */
+/* MOBILE OPTIMIZATION AT 720px */
 
 @media screen and (max-width:720px) {
-    #logo-text {
+    .nav-left {
         display: none;
     }
 
-    .desktop {
+    .mobile-menu, .nav-right {
+        width: 100%;
+    }
+
+    .desktop-menu {
         display: none;
     }
+
+    #navigation-bar {
+        justify-content: stretch;
+        height: 64px;
+    }
+
+    .base-container.hug-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hug-right {
+        padding: 0;
+    }
+
+    .container-right {
+        padding: 32px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #practicing-section .base-container .container-right .container-items {
+        margin-left: 0;
+    }
+
+    #hero-section .base-container .container-right .container-items {
+        margin-left: 0;
+    }
+
+    #thesis-section .base-container .container-right .container-items {
+        margin-left: 0;
+    }
+
+    .button {
+        max-width: 100%;
+    }
+
+    #practicing-section .container-left {
+        display: none;
+    }
+
+    .item-container {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+
 }
 
 /* Mobile Optimization for 480 */
